@@ -1,10 +1,16 @@
+package br.com.alura.screenmatch.models;
+
 public class Movie {
-    String name;
-    int yearOfRelease;
-    int durationInMinutes;
-    double sumOfScores;
-    int totalOfScores;
+    public String name;
+    public int yearOfRelease;
+    public int durationInMinutes;
+    private double sumOfScores;
+    private int totalOfScores;
     boolean includedInPlan;
+
+    int getTotalOfScores() {
+        return totalOfScores;
+    }
 
     void exibitMovieInfo() {
         System.out.println("Nome do filme: " + name);
