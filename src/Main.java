@@ -1,5 +1,6 @@
-import br.com.alura.screenmatch.models.Movie;
-import br.com.alura.screenmatch.models.Series;
+import calculation.TimeCalculator;
+import models.Movie;
+import models.Series;
 
 public class Main {
     public static void main(String[] args) {
@@ -24,5 +25,18 @@ public class Main {
         sopranos.setEpisodesPerSeason(13);
         sopranos.setMinutesPerEpisode(50);
         System.out.println(sopranos.getDurationInMinutes());
+
+        Movie anotherMovie = new Movie();
+        anotherMovie.setName("Taxi Driver");
+        anotherMovie.setYearOfRelease(1976);
+        anotherMovie.setDurationInMinutes(113);
+
+
+
+        TimeCalculator calculator = new TimeCalculator();
+        calculator.include(myMovie);
+        calculator.include(anotherMovie);
+        calculator.include(sopranos);
+        System.out.println(calculator.getTotalTime() + " minutes");
     }
 }
