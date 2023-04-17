@@ -1,7 +1,5 @@
-package calculation;
-import models.Movie;
-import models.Series;
-import models.Title;
+package be.com.alura.screenmatch.calculation;
+import br.com.alura.screenmatch.models.Title;
 
 public class TimeCalculator {
     private int totalTime;
