@@ -8,6 +8,12 @@ public class Title {
     private int totalOfScores;
     private boolean includedInPlan;
 
+
+    public Title(String name, int yearOfRelease) {
+        this.name = name;
+        this.yearOfRelease = yearOfRelease;
+    }
+
     public int getTotalOfScores() {
         return totalOfScores;
     }

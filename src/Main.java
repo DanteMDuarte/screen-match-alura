@@ -9,9 +9,8 @@ import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
-        Movie myMovie = new Movie();
-        myMovie.setName("O Poderoso Chefão");
-        myMovie.setYearOfRelease(1972);
+        Movie myMovie = new Movie("O Poderoso Chefão", 1972);
+        //myMovie.setYearOfRelease(1972);
         myMovie.setDurationInMinutes(175);
         myMovie.setDirector("Francis Ford Coppola");
 
@@ -22,21 +21,17 @@ public class Main {
         System.out.println("Total de avaliações: " + myMovie.getTotalOfScores());
         System.out.println(myMovie.getAverageScore());
 
-        Series sopranos = new Series();
-        sopranos.setName("Sopranos");
-        sopranos.setYearOfRelease(1999);
+        Series sopranos = new Series("Sopranos", 1999);
         sopranos.exibitTitleInfo();
         sopranos.setSeasons(6);
         sopranos.setEpisodesPerSeason(13);
         sopranos.setMinutesPerEpisode(50);
         System.out.println(sopranos.getDurationInMinutes());
 
-        Movie anotherMovie = new Movie();
-        anotherMovie.setName("Taxi Driver");
-        anotherMovie.setYearOfRelease(1976);
+        Movie anotherMovie = new Movie("Taxi Driver", 1976);
+        //anotherMovie.setName("Taxi Driver");
+        //anotherMovie.setYearOfRelease(1976);
         anotherMovie.setDurationInMinutes(113);
-
-
 
         TimeCalculator calculator = new TimeCalculator();
         calculator.include(myMovie);
@@ -53,9 +48,9 @@ public class Main {
         episode.setTotalOfViews(300);
         filter.filterIt(episode);
 
-        var paulosMovie = new Movie();
-        paulosMovie.setName("Dogville");
-        paulosMovie.setDurationInMinutes(200);
+        var paulosMovie = new Movie("Dogville", 2003);
+        //paulosMovie.setName("Dogville");
+        //paulosMovie.setDurationInMinutes(200);
         paulosMovie.setYearOfRelease(2003);
         paulosMovie.evaluateIt(10);
 
@@ -66,8 +61,6 @@ public class Main {
         System.out.println("Tamnho da lista: " + listOfMovies.size());
         System.out.println("Primeiro filme: " + listOfMovies.get(0).getName());
         System.out.println(listOfMovies);
-
-
-
+        System.out.println("toString do filme: " + listOfMovies.get(0).toString());
     }
 }
