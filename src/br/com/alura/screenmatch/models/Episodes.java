@@ -1,6 +1,6 @@
 package br.com.alura.screenmatch.models;
 
-import be.com.alura.screenmatch.calculation.Classifiable;
+import br.com.alura.screenmatch.calculation.Classifiable;
 
 public class Episodes implements Classifiable {
     private int number;

@@ -1,4 +1,4 @@
-package be.com.alura.screenmatch.calculation;
+package br.com.alura.screenmatch.calculation;
 
 public interface Classifiable {
     int getClassification();
